@@ -100,6 +100,25 @@
 	toggle_noun = "sleeves"
 	species_exception = list(/datum/species/golem)
 
+
+//chef red
+
+/obj/item/clothing/suit/chef_red
+	name = "red chef's apron"
+	desc = "An red apron-jacket for REAL chefs."
+	icon_state = "chef_red"
+	//inhand_icon_state = "chef_ref"
+	icon = 'icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	armor_type = /datum/armor/toggle_chef
+	body_parts_covered = CHEST|GROIN|ARMS
+	allowed = list(
+		/obj/item/kitchen,
+		/obj/item/knife/kitchen,
+		/obj/item/storage/bag/tray,
+	)
+	species_exception = list(/datum/species/golem)
+
 //Cook
 /datum/armor/toggle_chef
 	bio = 50
