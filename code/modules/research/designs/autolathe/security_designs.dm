@@ -186,6 +186,19 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
+//принтинг патронов RSH12 на хакнутом протолате
+/datum/design/p127rsh12
+	name = ".12.7x55mm RSH12 (VERY Lethal)"
+	id = "p127rsh12"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 3)
+	build_path = /obj/item/ammo_casing/p127rsh12
+	category = list(
+		RND_CATEGORY_HACKED,
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
 /datum/design/strilka310_surplus
 	name = ".310 Surplus Bullet Casing (VERY Lethal)"
 	id = "strilka310_surplus"

@@ -1,3 +1,16 @@
+//проджектайл RSH12S
+/obj/projectile/bullet/p127rsh12
+	name =".12.7x55mm bullet"
+	speed = 2.5
+	range = 250  // Enough to travel from one corner of the Z to the opposite corner and then some.
+	damage = 70
+	armour_penetration = FALSE
+	ignore_range_hit_prone_targets = TRUE
+	///Determines object damage.
+	var/object_damage = 80
+	///Determines how much additional damage the round does to mechs.
+	var/mecha_damage = 10
+
 // .50 BMG (Sniper)
 
 /obj/projectile/bullet/p50

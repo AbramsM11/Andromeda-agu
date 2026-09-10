@@ -112,6 +112,14 @@
 	max_ammo = 4
 	ammo_box_multiload = AMMO_BOX_MULTILOAD_NONE
 
+// магазин RSH12
+/obj/item/ammo_box/magazine/internal/cylinder/p127rsh12
+	name = "\improper .12.7x55mm revolver cylinder"
+	ammo_type = /obj/item/ammo_casing/p127rsh12
+	caliber = CALIBER_P127RSH12
+	max_ammo = 4
+	ammo_box_multiload = AMMO_BOX_MULTILOAD_NONE
+
 // AMR magazine
 
 /obj/item/ammo_box/magazine/wylom

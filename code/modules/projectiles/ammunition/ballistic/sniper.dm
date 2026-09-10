@@ -1,5 +1,11 @@
 // .50 (Sniper)
 
+/obj/item/ammo_casing/p127rsh12  // патроны на RSH12
+	name = ".12.7x55mm RSH12"
+	desc = "A .12.7x55mm RSH12 bullet casing."
+	caliber = CALIBER_P127RSH12
+	projectile_type = /obj/projectile/bullet/p127rsh12
+
 /obj/item/ammo_casing/p50
 	name = ".50 BMG bullet casing"
 	desc = "A .50 BMG bullet casing."

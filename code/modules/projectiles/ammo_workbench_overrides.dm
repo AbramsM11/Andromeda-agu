@@ -17,6 +17,16 @@ In case that doesn't stop you, you're going to want to look through:
 /obj/item/ammo_casing/c160smart
 	ammo_categories = AMMO_CLASS_LETHAL // surplus gun has it rough enough already
 
+//патрики на rsh12
+/obj/item/ammo_casing/p127rsh12
+	name = ".12.7x55mm bullet casing"
+	desc = "A .12.7x55mm bullet casing, designed for the RSH12 revolver."
+	icon = 'icons/obj/weapons/guns/ammo.dmi'
+	icon_state = ".50"
+	caliber = CALIBER_P127RSH12
+	projectile_type = /obj/projectile/bullet/p127rsh12
+	ammo_categories = AMMO_CLASS_SUPER
+
 /*
 *	.38 Special
 */
@@ -336,7 +346,6 @@ In case that doesn't stop you, you're going to want to look through:
 /*
 *	.50 BMG
 */
-
 /obj/item/ammo_casing/p50
 	ammo_categories = AMMO_CLASS_SUPER
 	custom_materials = AMMO_MATS_HEAVY
