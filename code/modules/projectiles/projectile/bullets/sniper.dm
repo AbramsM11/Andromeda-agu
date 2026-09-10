@@ -4,7 +4,7 @@
 	speed = 2.5
 	range = 250  // Enough to travel from one corner of the Z to the opposite corner and then some.
 	damage = 70
-	armour_penetration = FALSE
+	armour_penetration = 25
 	ignore_range_hit_prone_targets = TRUE
 	///Determines object damage.
 	var/object_damage = 80

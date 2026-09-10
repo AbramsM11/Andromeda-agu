@@ -139,7 +139,7 @@
 	icon_state = "RSH12"
 
 	fire_sound = 'sound/sec_haul/revolver_fire.ogg'
-	spread = 10
+	spread = 0
 
 // A 10mm pistol that shoots slow as all get out, but has that deep dish magazine going on
 
