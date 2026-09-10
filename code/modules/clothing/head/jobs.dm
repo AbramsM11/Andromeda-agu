@@ -4,6 +4,16 @@
 #define DRILL_YELLING "yelling"
 #define DRILL_CANADIAN "canadian"
 
+
+//red chef hat
+/obj/item/clothing/head/utility/red_chef_hat
+	name = "red chef's hat"
+	desc = "An red professional chef's hat."
+	icon_state = "red_chef_hat"
+	//inhand_icon_state = "red_chef_hat"
+	icon = 'icons/obj/clothing/head/utility.dmi'
+	worn_icon = 'icons/mob/clothing/head/utility.dmi'
+
 //Chef
 /obj/item/clothing/head/utility/chefhat
 	name = "chef's hat"
