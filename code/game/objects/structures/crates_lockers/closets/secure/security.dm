@@ -72,6 +72,7 @@
 	. = ..()
 
 	// Traitor steal objectives
+	new /obj/item/gun/ballistic/revolver/shotgun_revolver_RSH12(src)
 	new /obj/item/gun/energy/e_gun/hos(src)
 	new /obj/item/pinpointer/nuke(src)
 
