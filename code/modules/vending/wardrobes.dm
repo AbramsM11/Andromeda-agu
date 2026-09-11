@@ -48,6 +48,8 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 			"name" = "Main",
 			"icon" = "shield",
 			"products" = list(
+				/obj/item/clothing/under/rank/security_ussp = 4,
+				/obj/item/clothing/head/costume/ussp_security_cap = 4,
 				/obj/item/clothing/head/beret/sec = 4,
 				/obj/item/clothing/head/soft/sec = 4,
 				/obj/item/clothing/mask/bandana/striped/security = 4,
