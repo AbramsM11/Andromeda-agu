@@ -28,7 +28,7 @@
 	can_select = FALSE
 	ammo_x_offset = 0
 	selfcharge = 1
-	charge_delay = 15
+	charge_delay = 5
 	shaded_charge = TRUE
 	slot_flags = ITEM_SLOT_BACK
 	obj_flags = UNIQUE_RENAME
@@ -235,11 +235,17 @@
 	speak_up("[personality_mode ? "pickup" : "putdown"]", ignores_personality_toggle = TRUE)
 	return ..()
 
+//новая батарейка для хоши
+/obj/item/stock_parts/power_store/cell/hoshi_internal_cell
+	name = "\improper Hoshi modular laser rifle internal cell"
+	desc = "These are usually supposed to be inside of the gun, you know."
+	maxcharge = STANDARD_CELL_CHARGE * 1.5
+
 // Power cell for the big rifle
 /obj/item/stock_parts/power_store/cell/hyeseong_internal_cell
 	name = "\improper Hyeseong modular laser rifle internal cell"
 	desc = "These are usually supposed to be inside of the gun, you know."
-	maxcharge = STANDARD_CELL_CHARGE * 2
+	maxcharge = STANDARD_CELL_CHARGE * 3
 
 /datum/action/item_action/toggle_personality
 	name = "Toggle Weapon Personality"
@@ -255,7 +261,7 @@
 	worn_icon_state = "hoshi_kill"
 	base_icon_state = "hoshi"
 	charge_sections = 3
-	cell_type = /obj/item/stock_parts/power_store/cell
+	cell_type = /obj/item/stock_parts/power_store/cell/hoshi_internal_cell
 	ammo_type = list(/obj/item/ammo_casing/energy/cybersun_small_hellfire)
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	SET_BASE_PIXEL(0, 0)

@@ -16,7 +16,6 @@
 	var/json_speech_string = "kill"
 	/// What do we change the gun's runetext color to when applied
 	var/gun_runetext_color = "#cd4456"
-
 /// Applies some of the universal stats from the variables above
 /datum/laser_weapon_mode/proc/apply_stats(obj/item/gun/energy/applied_gun)
 	if(length(applied_gun.ammo_type))
@@ -37,11 +36,13 @@
 
 /// Stuff applied to the passed gun when the weapon mode is given to the gun
 /datum/laser_weapon_mode/proc/apply_to_weapon(obj/item/gun/energy/applied_gun)
-	applied_gun.burst_size = 2
+//	applied_gun.burst_size = 2
+	return
 
 /// Stuff applied to the passed gun when the weapon mode is removed from the gun
 /datum/laser_weapon_mode/proc/remove_from_weapon(obj/item/gun/energy/applied_gun)
-	applied_gun.burst_size = 1
+//	applied_gun.burst_size = 1
+	return
 
 // Marksman mode for the large laser, adds a scope, slower firing rate, and really quick projectiles
 /datum/laser_weapon_mode/marksman

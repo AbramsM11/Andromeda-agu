@@ -9,7 +9,7 @@
 /obj/projectile/beam/cybersun_laser
 	icon = 'icons/obj/weapons/guns/saibasan/projectiles.dmi'
 	icon_state = "kill_large"
-	damage = 20
+	damage = 25
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
 	light_color = COLOR_SOFT_RED
 	wound_falloff_tile = -1
@@ -24,7 +24,7 @@
 
 /obj/projectile/beam/cybersun_laser/marksman
 	icon_state = "sniper"
-	damage = 50
+	damage = 70
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/yellow_laser
 	speed = 2.5
 	light_range = 2
@@ -42,7 +42,7 @@
 /obj/projectile/beam/cybersun_laser/disable
 	icon_state = "disable_large"
 	damage = 0
-	stamina = 20
+	stamina = 25
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = COLOR_BRIGHT_BLUE
 	stamina_falloff_tile = -0.25
@@ -57,7 +57,7 @@
 /obj/projectile/beam/cybersun_laser/granata
 	name = "plasma grenade"
 	icon_state = "grenade"
-	damage = 50
+	damage = 100
 	speed = 0.5
 	range = 6
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
@@ -105,7 +105,7 @@
 /obj/item/ammo_casing/energy/cybersun_big_shotgun
 	projectile_type = /obj/projectile/beam/cybersun_laser/granata_shrapnel/shotgun_pellet
 	e_cost = LASER_SHOTS(10, STANDARD_CELL_CHARGE * 2)
-	pellets = 5
+	pellets = 6
 	variance = 30
 	select_name = "Shotgun"
 	fire_sound = 'sound/weapons/guns/laser_firing/melt.ogg'
@@ -129,7 +129,7 @@
 
 /obj/projectile/beam/cybersun_laser/hellfire
 	icon_state = "hellfire"
-	damage = 20
+	damage = 25
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
 	speed = 1.6
 	wound_bonus = 0
@@ -220,7 +220,7 @@
 /obj/item/ammo_casing/energy/cybersun_small_shotgun
 	projectile_type = /obj/projectile/beam/cybersun_laser/granata_shrapnel/shotgun_pellet
 	e_cost = LASER_SHOTS(10, STANDARD_CELL_CHARGE)
-	pellets = 3
+	pellets = 5
 	variance = 15
 	select_name = "Shotgun"
 	fire_sound = 'sound/weapons/guns/laser_firing/melt.ogg'
