@@ -47445,7 +47445,8 @@
 /area/station/engineering/atmos)
 "rGD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
-/obj/effect/spawner/structure/window/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal/incinerator)
 "rHh" = (
@@ -98314,7 +98315,7 @@ bYw
 bYw
 klp
 njg
-mGP
+cbC
 pVS
 pVS
 pVS

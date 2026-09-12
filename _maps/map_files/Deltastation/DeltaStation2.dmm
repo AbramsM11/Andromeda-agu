@@ -16245,6 +16245,11 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
+"dWW" = (
+/obj/structure/lattice,
+/obj/structure/statue/bronze/marx,
+/turf/open/space/basic,
+/area/space/nearstation)
 "dXd" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch"
@@ -31306,8 +31311,8 @@
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "hHx" = (
-/obj/item/radio/intercom/directional/west,
-/turf/open/floor/wood,
+/obj/structure/falsewall,
+/turf/open/indestructible/plating,
 /area/station/service/theater/abandoned)
 "hHF" = (
 /turf/open/floor/plating{
@@ -49483,6 +49488,11 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
+"mgL" = (
+/obj/structure/lattice,
+/obj/item/frog_statue,
+/turf/open/space/basic,
+/area/space/nearstation)
 "mgW" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 4
@@ -71658,6 +71668,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
+"rIF" = (
+/obj/structure/lattice,
+/obj/item/fake_items/feddy_fazbear,
+/turf/open/space/basic,
+/area/space/nearstation)
 "rII" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/stripes/line{
@@ -79150,10 +79165,10 @@
 /turf/open/floor/iron,
 /area/station/maintenance/port/fore)
 "tyY" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
 	dir = 4
 	},
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmos/hfr_room)
 "tzc" = (
@@ -83130,9 +83145,7 @@
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "uwc" = (
-/obj/machinery/vending/autodrobe,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/iron/dark,
+/turf/open/indestructible/plating,
 /area/station/service/theater/abandoned)
 "uwi" = (
 /obj/effect/turf_decal/trimline/purple/filled/warning{
@@ -85153,9 +85166,10 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/chemistry)
 "uUg" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/station/engineering/atmos/hfr_room)
+/obj/structure/lattice,
+/obj/item/toy/plush/moth,
+/turf/open/space/basic,
+/area/space/nearstation)
 "uUh" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -93952,7 +93966,9 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "xih" = (
-/obj/machinery/vending/cigarette,
+/obj/effect/spawner/random/structure/table_fancy,
+/obj/item/gun/ballistic/revolver/c38,
+/obj/item/ammo_box/speedloader/c38,
 /turf/open/floor/plating,
 /area/station/service/theater/abandoned)
 "xil" = (
@@ -118741,7 +118757,7 @@ edx
 sJF
 gSB
 pGt
-pEP
+gAL
 qYo
 pxN
 uQk
@@ -123408,7 +123424,7 @@ aiS
 lEi
 mez
 oGb
-qYo
+rIF
 oGb
 lGF
 sva
@@ -123665,7 +123681,7 @@ nvD
 lEi
 ucv
 oGb
-qYo
+dWW
 oGb
 lGF
 qOL
@@ -123869,7 +123885,7 @@ efQ
 aaa
 efQ
 qYo
-uUg
+epV
 kVL
 lEr
 uAK
@@ -124126,7 +124142,7 @@ qYo
 qYo
 efQ
 aaa
-uUg
+epV
 kVL
 lEr
 gwM
@@ -124383,7 +124399,7 @@ efQ
 aaa
 efQ
 qYo
-uUg
+epV
 hJz
 lEr
 uAK
@@ -125416,7 +125432,7 @@ qYo
 dYj
 tyY
 tyY
-uUg
+epV
 dYj
 dYj
 dYj
@@ -136018,7 +136034,7 @@ jDi
 jDi
 hup
 iyy
-qYo
+uUg
 qYo
 oCs
 dmq
@@ -138588,7 +138604,7 @@ jDi
 jDi
 hup
 iyy
-qYo
+mgL
 qYo
 oCs
 hHQ
@@ -148661,7 +148677,7 @@ bpw
 qsw
 iLr
 iLr
-iLr
+hHx
 rPY
 ovc
 wzY
@@ -149173,9 +149189,9 @@ nXH
 ffY
 aii
 xnT
-hHx
-nbc
-xnT
+iLr
+iLr
+iLr
 rPY
 rPY
 gcB
