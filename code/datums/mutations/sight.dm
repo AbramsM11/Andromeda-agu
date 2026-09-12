@@ -44,11 +44,12 @@
 	difficulty = 18
 	text_gain_indication = span_notice("You can see the heat rising off of your skin...")
 	text_lose_indication = span_notice("You can no longer see the heat rising off of your skin...")
-	instability = POSITIVE_INSTABILITY_MAJOR // thermals aren't station equipment
+	instability = POSITIVE_INSTABILITY_MODERATE // thermals aren't station equipment
 	synchronizer_coeff = 1
 	power_coeff = 1
 	energy_coeff = 1
 	power_path = /datum/action/cooldown/spell/thermal_vision
+	limb_req = BODY_ZONE_HEAD
 
 /datum/mutation/thermal/on_losing(mob/living/carbon/human/owner)
 	if(..())
@@ -59,28 +60,28 @@
 		REMOVE_TRAIT(owner, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
 		owner.update_sight()
 
-/datum/mutation/thermal/setup()
-	. = ..()
-	var/datum/action/cooldown/spell/thermal_vision/to_modify = .
-	if(!istype(to_modify)) // null or invalid
-		return
-
-	to_modify.eye_damage = /datum/action/cooldown/spell/thermal_vision::eye_damage * GET_MUTATION_SYNCHRONIZER(src) * GET_MUTATION_POWER(src)
-	to_modify.thermal_duration = /datum/action/cooldown/spell/thermal_vision::thermal_duration * GET_MUTATION_POWER(src)
+// /datum/mutation/thermal/setup()
+//	. = ..()
+//	var/datum/action/cooldown/spell/thermal_vision/to_modify = .
+//	if(!istype(to_modify)) // null or invalid
+//		return
+//
+//	to_modify.eye_damage = /datum/action/cooldown/spell/thermal_vision::eye_damage * GET_MUTATION_SYNCHRONIZER(src) * GET_MUTATION_POWER(src)
+//	to_modify.thermal_duration = /datum/action/cooldown/spell/thermal_vision::thermal_duration * GET_MUTATION_POWER(src)
 
 /datum/action/cooldown/spell/thermal_vision
 	name = "Activate Thermal Vision"
-	desc = "You can see thermal signatures, at the cost of your eyesight."
+	desc = "You can see thermal signatures through walls."
 	button_icon = 'icons/mob/actions/actions_changeling.dmi'
 	button_icon_state = "augmented_eyesight"
 
-	cooldown_time = 60 SECONDS
+	cooldown_time = 5 SECONDS
 	spell_requirements = NONE
 
 	/// How much eye damage is given on cast
-	var/eye_damage = 7.5
+//	var/eye_damage = 7.5
 	/// The duration of the thermal vision
-	var/thermal_duration = 30 SECONDS
+//	var/thermal_duration = 30 SECONDS
 
 /datum/action/cooldown/spell/thermal_vision/Remove(mob/living/remove_from)
 	REMOVE_TRAIT(remove_from, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
@@ -88,26 +89,31 @@
 	return ..()
 
 /datum/action/cooldown/spell/thermal_vision/is_valid_target(atom/cast_on)
-	return isliving(cast_on) && !HAS_TRAIT(cast_on, TRAIT_THERMAL_VISION)
+//	return isliving(cast_on) && !HAS_TRAIT(cast_on, TRAIT_THERMAL_VISION)
+	return isliving(cast_on)
 
 /datum/action/cooldown/spell/thermal_vision/cast(mob/living/cast_on)
 	. = ..()
+	if(HAS_TRAIT(cast_on, TRAIT_THERMAL_VISION))
+		REMOVE_TRAIT(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
+		cast_on.update_sight()
+		to_chat(cast_on, span_info("You blink a few times, your vision returning to normal."))
+		return
 	ADD_TRAIT(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
 	cast_on.update_sight()
 	to_chat(cast_on, span_info("You focus your eyes intensely, as your vision becomes filled with heat signatures."))
-	addtimer(CALLBACK(src, PROC_REF(deactivate), cast_on), thermal_duration)
+//	ADD_TRAIT(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
+//	cast_on.update_sight()
+//	to_chat(cast_on, span_info("You focus your eyes intensely, as your vision becomes filled with heat signatures."))
+//	addtimer(CALLBACK(src, PROC_REF(deactivate), cast_on), thermal_duration)
 
-/datum/action/cooldown/spell/thermal_vision/proc/deactivate(mob/living/cast_on)
-	if(QDELETED(cast_on) || !HAS_TRAIT_FROM(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION))
-		return
-
-	REMOVE_TRAIT(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
-	cast_on.update_sight()
-	to_chat(cast_on, span_info("You blink a few times, your vision returning to normal as a dull pain settles in your eyes."))
-
-	if(iscarbon(cast_on))
-		var/mob/living/carbon/carbon_cast_on = cast_on
-		carbon_cast_on.adjust_organ_loss(ORGAN_SLOT_EYES, eye_damage)
+// /datum/action/cooldown/spell/thermal_vision/proc/deactivate(mob/living/cast_on)
+//	if(QDELETED(cast_on) || !HAS_TRAIT_FROM(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION))
+//		return
+//
+//	REMOVE_TRAIT(cast_on, TRAIT_THERMAL_VISION, GENETIC_MUTATION)
+//	cast_on.update_sight()
+//	to_chat(cast_on, span_info("You blink a few times, your vision returning to normal as a dull pain settles in your eyes."))
 
 ///X-ray Vision lets you see through walls.
 /datum/mutation/xray
@@ -115,7 +121,10 @@
 	desc = "A strange genome that allows the user to see between the spaces of walls." //actual x-ray would mean you'd constantly be blasting rads, which might be fun for later //hmb
 	text_gain_indication = span_notice("The walls suddenly disappear!")
 	instability = POSITIVE_INSTABILITY_MAJOR
-	locked = TRUE
+	locked = FALSE
+	difficulty = 18
+	limb_req = BODY_ZONE_HEAD
+	quality = POSITIVE
 
 /datum/mutation/xray/on_acquiring(mob/living/carbon/human/owner)
 	. = ..()
@@ -135,9 +144,10 @@
 /datum/mutation/laser_eyes
 	name = "Laser Eyes"
 	desc = "Reflects concentrated light back from the eyes."
+	instability = POSITIVE_INSTABILITY_MAJOR
 	quality = POSITIVE
-	locked = TRUE
-	difficulty = 16
+	locked = FALSE
+	difficulty = 18
 	text_gain_indication = span_notice("You feel pressure building up behind your eyes.")
 	layer_used = FRONT_MUTATIONS_LAYER
 	limb_req = BODY_ZONE_HEAD
@@ -206,5 +216,5 @@
 
 // BEGIN NOVA CORE MIGRATION: code/datums/mutations/sight.dm
 /datum/mutation/thermal
-	locked = TRUE
+	locked = FALSE
 // END NOVA CORE MIGRATION: code/datums/mutations/sight.dm
