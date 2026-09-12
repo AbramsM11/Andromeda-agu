@@ -9,6 +9,23 @@
  * Security
  */
 
+//форма ussp для секов
+/obj/item/clothing/under/rank/security_ussp
+	name = "USSP security uniform"
+	desc = "A tactical security uniform from the USSP."
+	icon = 'icons/obj/clothing/under/security.dmi'
+	worn_icon = 'icons/mob/clothing/under/security.dmi'
+	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
+//	worn_icon_digi = 'icons/mob/clothing/under/security_digi.dmi' - нету спрайта диги
+	icon_state = "security_ussp"
+	inhand_icon_state = "ussp_ssuit"
+	armor_type = /datum/armor/clothing_under/rank_security
+	strip_delay = 5 SECONDS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+	can_adjust = FALSE
+
 /obj/item/clothing/under/rank/security
 	icon = 'icons/obj/clothing/under/security.dmi'
 	worn_icon = 'icons/mob/clothing/under/security.dmi'

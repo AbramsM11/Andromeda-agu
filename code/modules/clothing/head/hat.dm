@@ -3,6 +3,19 @@
 	worn_icon = 'icons/mob/clothing/head/hats.dmi'
 	abstract_type = /obj/item/clothing/head/hats
 
+//фуражка ussp
+/obj/item/clothing/head/costume/ussp_security_cap
+	name = "USSP security cap"
+	desc = "A tactical security cap from the USSP."
+	icon = 'icons/obj/clothing/head/hats.dmi'
+	worn_icon = 'icons/mob/clothing/head/hats.dmi'
+	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	icon_state = "secussp_cap"
+	inhand_icon_state = "h_usspcap"
+	armor_type = /datum/armor/cosmetic_sec
+	flags_inv = HIDEHAIR
+
 /obj/item/clothing/head/hats/centhat
 	name = "\improper CentCom hat"
 	icon_state = "centcom"
