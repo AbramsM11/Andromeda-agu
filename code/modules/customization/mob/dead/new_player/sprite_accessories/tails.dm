@@ -536,6 +536,11 @@
 	name = "Acrador (Narrow and Very Long)"
 	icon_state = "acrador_5"
 
+/datum/sprite_accessory/tails/mammal/wagging/easterndragon
+	name = "Dragon Eastern"
+	icon_state = "easternd"
+	color_src = USE_MATRIXED_COLORS
+
 /*
 *	TESHARI
 */
